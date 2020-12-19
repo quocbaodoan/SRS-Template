@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Đăng nhập </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" >
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
+    <style>
+        .content {
+            max-width: 480px;
+            margin: auto;
+        }
+        
+        h2{
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        form{
+            height: 300px;
+            margin-top: 30%;
+            background-color:  rgb(119, 119, 119);
+            padding: 10px 40px;
+            border-radius: 30px;
+            color: #ffffff;
+            font-size: 21px;
+        }
+        
+        input, textarea{
+            margin-left: 15px;
+            outline: none;
+            padding: 10px 30px;
+        }
+        
+        .row{
+            margin-top: 26px;
+        }
+        
+        label{
+            margin-left: 15px;
+        }
+
+        input[type=button]{
+            font-family: 'Lato', sans-serif;
+            outline: none;
+            border-color: none;
+            padding: 8px 13px;
+            margin-left: 19px;
+            border-radius: 20px;
+            font-weight: 600;
+            background-color: white;
+            color: rgb(119, 119, 119);
+        }
+        
+        #ok{
+            width: 90px;
+            padding: 10px 0px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "content">
+        <form>
+            <h2>Đăng nhập</h2>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label>Mã số</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="Text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="Password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <input type="button" id="ok" value = "Đăng nhập">
+                </div>
+                <div class="col span-1-of-3">
+                    <input type="button" id="ok" value = "Hủy" >
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

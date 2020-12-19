@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Phản hồi khách hàng </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" >
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
+    <style>
+        input[type=button]{
+            font-family: 'Lato', sans-serif;
+            outline: none;
+            border-color: none;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-weight: 600;
+            background-color: white;
+            color: rgb(119, 119, 119);
+        }
+
+        .logo{
+            width: 250px;
+            color: white;
+            font-size: 36px;
+            font-weight: 900;
+            margin-left: 65px;
+            margin-top: 14px;
+            margin-bottom: 16px;
+        }
+
+        .header{
+            display:flex;
+            background-color: rgb(119, 119, 119);
+        }
+
+        .logout{
+            margin-left: 53%;
+            display: flex;
+            color: white;
+            height: 45px;
+            margin-top: 16px;
+            margin-bottom: 14px;
+        }
+
+        h4{
+            margin-top: 11px;
+            margin-right: 5px;
+        }
+
+        .body{
+            margin-top: 20px;
+        }
+
+        .menu{
+            padding-left: 45px;
+            padding-top: 10px;
+        }
+
+        .menu-unit{
+            width: 210px;
+            background-color: white;
+            padding: 10px 0px;
+            border-style: solid;
+            text-align: center;
+            font-size: 20px;
+            margin-top: -3px;
+        }
+
+        .menu-unit-top{
+            border-radius: 20px 20px 0px 0px;
+            border-color: rgb(119, 119, 119);
+            background-color: rgb(119, 119, 119);
+            color: #ffffff;
+        }
+
+        .menu-unit-bottom{
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        form{
+            max-width: 850px;
+            height: 530px;
+            font-size: 22px;
+            background-color:  rgb(119, 119, 119);
+            padding: 20px 40px 25px 40px;
+            border-radius: 30px;
+            color: #ffffff;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img{
+            width: 500px;
+            margin-left: 120px;
+        }
+
+        table{
+            margin-top: 10px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th{
+            border: 2px solid rgb(92, 92, 92);
+            text-align: center;
+            height: 60px;
+            padding: 8px;
+        }
+
+        td{
+            font-size: 18px;
+        }
+
+        #noidung{
+            width: 260px;
+        }
+
+        input[type=text]{
+            padding: 9px 60px;
+        }
+
+        .span-2-of-5{
+            padding-left: 60px;
+        }
+
+        .span-3-of-5{
+            padding-left: 50px;
+        }
+
+        .pagination a {
+            color: rgb(255, 255, 255);
+            float: left;
+            padding: 8px 10px;
+            text-decoration: none;
+            font-size: 18px;
+          }
+        .pagination{
+            margin-top: 5px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="header">
+            <div class="logo">
+                Vie-house
+            </div>
+            <div class="logout">
+                <h4>Welcome, Anh</h4>
+                <input type="button" value="Đăng xuất">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="body">
+            <div class="col span-1-of-4 menu">
+                <div class="row menu-unit menu-unit-top">
+                    Phản hồi khách hàng
+                </div>
+                <div class="row menu-unit menu-unit-second">
+                    Tình trạng phòng
+                </div> 
+                <div class="row menu-unit menu-unit-third">
+                    Tình trạng vật tư
+                </div>
+                <div class="row menu-unit menu-unit-bottom">
+                    Đổi mật khẩu
+                </div>
+            </div>
+            <div class="col span-3-of-4">
+                <form>
+                    <div class="row form-row">
+                        <h2>Đánh giá và nhận xét</h2>
+                    </div>
+                    <div class="rom form-row">
+                        <img src="resources/img/Capture.PNG">
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Ngày</th>
+                            <th>Khách hàng</th>
+                            <th id="noidung">Nhận xét</th>
+                            <th>Đánh giá</th>
+                            <th>Chức năng</th>
+                        </tr>
+                        <tr>
+                            <td>12/8/2020</td>
+                            <td>Đỗ Tấn Nguyên</td>
+                            <td>Dịch vụ rất nhanh gọn</td>
+                            <td>5/5</td>
+                            <td>Xem chi tiết</td>
+                        </tr>
+                        <tr>
+                            <td>29/7/2020</td>
+                            <td>Nguyễn Thị Trâm</td>
+                            <td>Homestay đẹp và sạch</td>
+                            <td>5/5</td>
+                            <td>Xem chi tiết</td>
+                        </tr>
+                        <tr>
+                            <td>8/9/2020</td>
+                            <td>Trần Ánh My</td>
+                            <td>Hệ thống nước bị hỏng,<br>cần cải thiện hơn</td>
+                            <td>4/5</td>
+                            <td>Xem chi tiết</td>
+                        </tr>
+                        <tr>
+                            <td>12/8/2020</td>
+                            <td>Vũ Văn Sỹ</td>
+                            <td>Tận tình và chu đáo</td>
+                            <td>5/5</td>
+                            <td>Xem chi tiết</td>
+                        </tr>
+                    </table>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

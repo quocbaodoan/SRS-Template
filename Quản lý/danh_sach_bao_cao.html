@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danh sách báo cáo </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" >
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
+    <style>
+        html{
+            max-width: 1500px;
+        }
+
+        input[type=button]{
+            font-family: 'Lato', sans-serif;
+            outline: none;
+            border-color: none;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-weight: 600;
+            background-color: white;
+            color: rgb(119, 119, 119);
+        }
+
+        .logo{
+            width: 250px;
+            color: white;
+            font-size: 36px;
+            font-weight: 900;
+            margin-left: 65px;
+            margin-top: 14px;
+            margin-bottom: 16px;
+        }
+
+        .header{
+            display:flex;
+            background-color: rgb(119, 119, 119);
+        }
+
+        h4{
+            margin-top: 11px;
+            margin-right: 5px;
+        }
+
+        .logout{
+            margin-left: 62%;
+            display: flex;
+            color: white;
+            height: 45px;
+            margin-top: 16px;
+            margin-bottom: 14px;
+        }
+
+        .body{
+            margin-top: 20px;
+        }
+
+        .menu{
+            padding-left: 45px;
+            padding-top: 15px;
+        }
+
+        .menu-unit{
+            width: 210px;
+            background-color: white;
+            padding: 10px 0px;
+            border-style: solid;
+            text-align: center;
+            font-size: 20px;
+            margin-top: -3px;
+        }
+
+        .menu-unit-top{
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .menu-unit-second{
+            border-color: rgb(119, 119, 119);
+            background-color: rgb(119, 119, 119);
+            color: #ffffff;
+        }
+
+        .menu-unit-bottom{
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .content{
+            max-width: 1150px;
+        }
+
+        .search-tool{
+            margin-top: 7px;
+            margin-left: 22%;
+        }
+
+        input[type=search], select{
+            font-family: 'Lato', sans-serif;
+            color: rgb(119, 119, 119);
+            margin-left: 25px;
+            padding: 8px 20px;
+        }
+
+        #search-button{
+            margin-left: 25px;
+        }
+
+        table{
+            margin-top: 15px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th{
+            border: 2px solid rgb(92, 92, 92);
+            text-align: center;
+            height: 70px;
+            padding: 8px;
+        }
+
+        td{
+            font-size: 18px;
+        }
+          
+        tr:nth-child(even){
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+
+        #baocao{
+            width: 280px;
+        }
+
+        .pagination a {
+            color: rgb(119, 119, 119);
+            float: left;
+            padding: 8px 10px;
+            text-decoration: none;
+          }
+        .pagination{
+            margin-top: 10px;
+            margin-left: 42%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="header">
+            <div class="logo">
+                Vie-house
+            </div>
+            <div class="logout">
+                <h4>Welcome, admin</h4>
+                <input type="button" value="Đăng xuất">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="body">
+            <div class="col span-1-of-5 menu">
+                <div class="row menu-unit menu-unit-top">
+                    Quản lý nhân viên
+                </div>
+                <div class="row menu-unit menu-unit-second">
+                    Quản lý báo cáo
+                </div>
+                <div class="row menu-unit menu-unit-bottom">
+                    Thông tin cá nhân
+                </div>
+            </div>
+            <div class="col span-4-of-5 content">
+                <div class="row search-tool">
+                    <label>Tìm kiếm</label>
+                    <input type="search">
+                    <select>
+                        <option>
+                            Tên báo cáo
+                        </option>
+                        <option>
+                            Tên nhân viên
+                        </option>
+                        <option>
+                            Phòng ban
+                        </option>
+                    </select>
+                    <input type="button" id="search-button" value="Tìm kiếm">
+                </div>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ngày nộp</th>
+                        <th id="baocao">Tên Báo cáo</th>
+                        <th>Nhân viên</th>
+                        <th>Phòng ban</th>
+                        <th>Chức vụ</th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>29/8/2020</td>
+                        <td>Báo cáo hoạt động sắp tới tháng 9/2020</td>
+                        <td>Dương Tấn Quang</td>
+                        <td>Marketing</td>
+                        <td>Trưởng phòng</td>
+                        <td>Phê duyệt</td>
+                        <td>Xem chi tiết</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>23/8/2020</td>
+                        <td>Cần lắp đặt thêm điều hòa</td>
+                        <td>Nguyễn Ngọc Tú</td>
+                        <td>Dịch vụ</td>
+                        <td>Nhân viên</td>
+                        <td>Chưa phê duyệt</td>
+                        <td>Xem chi tiết</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>8/9/2020</td>
+                        <td>Báo cáo hoạt động nhân viên tháng 8/2020</td>
+                        <td>Tô Đức Chung</td>
+                        <td>Lễ tân</td>
+                        <td>Trưởng phòng</td>
+                        <td>Đã xem</td>
+                        <td>Xem chi tiết</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>3/9/2020</td>
+                        <td>Báo cáo doanh thu tháng 8/2020</td>
+                        <td>Đoàn Trung Tiến</td>
+                        <td>Kế toán</td>
+                        <td>Phó phòng</td>
+                        <td>Phê duyệt</td>
+                        <td>Xem chi tiết</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>13/9/2020</td>
+                        <td>Đơn xin thôi việc</td>
+                        <td>Trần Ánh Nguyệt</td>
+                        <td>Marketing</td>
+                        <td>Nhân viên</td>
+                        <td>Chưa xem</td>
+                        <td>Xem chi tiết</td>
+                    </tr>
+                </table>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">&raquo;</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

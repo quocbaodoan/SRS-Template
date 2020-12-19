@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Xóa công ty </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" >
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
+    <style>
+        html{
+            max-width: 1500px;
+        }
+
+        input[type=button]{
+            font-family: 'Lato', sans-serif;
+            outline: none;
+            border-color: none;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-weight: 600;
+            background-color: white;
+            color: rgb(119, 119, 119);
+        }
+
+        .logo{
+            width: 250px;
+            color: white;
+            font-size: 36px;
+            font-weight: 900;
+            margin-left: 65px;
+            margin-top: 14px;
+            margin-bottom: 16px;
+        }
+
+        .header{
+            display:flex;
+            background-color: rgb(119, 119, 119);
+        }
+
+        .logout{
+            margin-left: 62%;
+            display: flex;
+            color: white;
+            height: 45px;
+            margin-top: 16px;
+            margin-bottom: 14px;
+        }
+
+        h4{
+            margin-top: 11px;
+            margin-right: 5px;
+        }
+
+        .body{
+            margin-top: 20px;
+        }
+
+        .menu{
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        .menu-unit{
+            width: 240px;
+            background-color: white;
+            padding: 10px 0px;
+            border-style: solid;
+            text-align: center;
+            font-size: 20px;
+            margin-top: -3px;
+        }
+
+        .menu-unit-top{
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .menu-unit-second{
+            background-color: rgb(119, 119, 119);
+            color: #ffffff;
+            border-color: rgb(119, 119, 119);
+        }
+
+        .menu-unit-bottom{
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .main-button-first, .main-button-second, .main-button-third{
+            margin-top: 0px;
+            width: 190px;
+            border-style: solid;
+            border-radius: 20px;
+            background-color: white;
+            padding: 8px 0px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main-button-second{
+            background-color: rgb(119, 119, 119);
+            color: #ffffff;
+            border-color: rgb(119, 119, 119);
+        }
+
+        h2{
+            text-align: center;
+            margin-right: 50px;
+            margin-bottom: 10px;
+        }
+
+        table{
+            margin-top: 15px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1150px;
+            margin-bottom: 10px;
+        }
+
+        td, th{
+            border: 2px solid rgb(92, 92, 92);
+            text-align: center;
+            padding: 8px;
+        }
+
+        td{
+            font-size: 18px;
+            height: 40px;
+        }
+
+        tr:nth-child(even){
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+
+        #button-form{
+            width: 80px;
+            padding: 9px 10px;
+            margin-top: -10px;
+        }
+
+        .pagination a {
+            color: rgb(119, 119, 119);
+            float: left;
+            padding: 8px 10px;
+            text-decoration: none;
+        }
+
+        .pagination{
+            margin-left: 1000px;
+        }
+
+        input[type=text], select{
+            padding: 6px 10px;
+            margin-left: 5px;
+        }
+
+        #popup {
+			position: fixed;
+			font-family: arial,helvetica, sans-serif;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.4);
+			z-index: 99999;
+			opacity:0;
+			transition: opacity 400ms linear;
+			pointer-events: none;
+        }
+        
+		#popup:target {
+			opacity:1;
+			pointer-events: auto;
+		}
+		#popup > div {
+			width: 400px;
+			height: 250px;
+			position: relative;
+			margin: 11% auto 25% auto;
+			padding: 20px 20px 13px 20px;
+			border: solid;
+			border-color: black;
+			border-width : 2px;
+			background: rgb(119, 119, 119);
+            border-radius: 30px;
+            color: white;
+        }	
+        
+        #h2-popup{
+            text-align: center;
+            margin-left: 50px;
+        }
+
+        h3{
+            text-align: center;
+            margin-top: 33px;
+        }
+
+        #button-popup{
+            margin-top: 33px;
+            margin-left: 50px;
+            width: 80px;
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="header">
+            <div class="logo">
+                Vie-house
+            </div>
+            <div class="logout">
+                <h4>Welcome, Hằng</h4>
+                <input type="button" value="Đăng xuất">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="body">
+            <div class="col span-1-of-5 menu">
+                <div class="row menu-unit menu-unit-top">
+                    Nghiên cứu - định hướng
+                </div>
+                <div class="row menu-unit menu-unit-second">
+                    Quảng cáo - PR
+                </div>
+                <div class="row menu-unit menu-unit-bottom">
+                    Đổi mật khẩu
+                </div>
+            </div>
+            <div class="col span-4-of-5">
+                <div class="row" style="margin-left: 30%;">
+                    <div class="col span-1-of-2 main-button-first">
+                        Đối tác
+                    </div>
+                    <div class="col span-1-of-2 main-button-second">
+                        Xem xét
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên công ty</th>
+                        <th>Mã công ty</th>
+                        <th>Loại công ty</th>
+                        <th>Kịch bản quảng cáo</th>
+                        <th>Chi phí</th>
+                        <th>Đối tác</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <div class="col span-1-of-12">
+                        <input type="button" id="button-form" value="Thêm">
+                    </div>
+                    <div class="col span-1-of-12">
+                        <input type="button" id="button-form" value="Sửa">
+                    </div>
+                    <div class="col span-1-of-12">
+                        <input type="button" id="button-form" value="Xóa" onclick="location.href = '#popup';">
+                    </div>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <div>
+            <div class="row popup-row">
+                <h2 id="h2-popup">Xóa công ty</h2>
+            </div>
+            <div class="row popup-row">
+                <h3>Bạn có chắc chắn muốn xóa<br>công ty này không?</h3>
+            </div>
+            <div class="row popup-row">
+                <div class="col span-1-of-2">
+                    <input type="button" id="button-popup" value="Có">
+                </div>
+                <div class="col span-1-of-2">
+                    <input type="button" id="button-popup" value="Không">
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
